@@ -5,8 +5,6 @@
   <p align="center">
     <img src="https://img.shields.io/badge/Language-Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Badges"/>
     <img src="https://img.shields.io/badge/JDK-8%2B-blue?style=for-the-badge" alt="JDK Version"/>
-    <img src="https://img.shields.io/github/stars/pushtikadia/Task_Manager?style=for-the-badge&color=FFD700&labelColor=1E1E24" alt="Stars"/>
-  </p>
 
   🗣️ **A robust, lightweight, and efficient command-line application featuring persistent file storage.**
 
