@@ -1,4 +1,5 @@
 <div align="center">
+  <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&q=80" width="100%" style="max-width: 600px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); margin-bottom: 24px;" alt="Task Manager Banner" />
 
   # ✅ Task Manager CLI (Java)
 
@@ -32,21 +33,19 @@ This project features a clean, single-file architecture built strictly for high 
 
 * **📝 CRUD Operations:** Quickly **Add** fresh tasks, **List** active allocations, and **Remove** unwanted targets.
 * **✅ Status Tracking:** Effortlessly shift task states between **DONE** and **TODO** boundaries to map out your progress.
-* **💾 Persistent Storage:** Automatic local I/O writing flushes variables instantly to `tasks.txt` so your state is preserved across reboots.
-* **🆔 Unique Identifiers:** Leverages standard cryptographic `UUID` strings to prevent collision vulnerabilities during deletions.
-* **🕒 Accurate Timestamps:** Generates real-time creation stamps the exact moment a task enters the persistent lifecycle.
+* **💾 Persistent Storage:** Automatically saves all data to `tasks.txt` so your list is restored next time you run the app.
+* **🆔 Unique IDs:** Uses `UUID` to ensure every task has a unique identifier for safe deletion and updates.
+* **🕒 Timestamps:** Records the exact creation date and time for every task.
 
 ---
 
 ## 🚀 Getting Started
 
-### 📋 Prerequisites
-Before launching the command-line interface, verify your system meets the minimum requirements:
-* **Java Development Kit (JDK) 8** or higher installed and configured in your environment path variables.
+### Prerequisites
+* Java Development Kit (JDK) 8 or higher installed.
 
-### ⚙️ Installation & Execution
+### Installation & Execution
 
-1. **Clone the Source Files:**
+1. **Clone the repository:**
    ```bash
    git clone [https://github.com/pushtikadia/Task_Manager.git](https://github.com/pushtikadia/Task_Manager.git)
-   cd Task_Manager
