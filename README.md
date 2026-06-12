@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="100%" max-width="1200" height="auto" alt="Task Manager Banner" src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&q=80" style="border-radius: 16px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); margin-bottom: 24px;" />
+  <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&q=80" width="100%" style="max-width: 600px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); margin-bottom: 24px;" alt="Task Manager Banner" />
 
   # ✅ Task Manager CLI (Java)
 
