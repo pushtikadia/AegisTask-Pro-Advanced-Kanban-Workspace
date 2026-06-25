@@ -21,6 +21,15 @@
                 <a href="#" class="nav-item active"><i class="fa-solid fa-gauge"></i> Workspace Dashboard</a>
                 <a href="#" class="nav-item" id="themeToggle"><i class="fa-solid fa-circle-half-stroke"></i> Contrast Matrix</a>
             </nav>
+            
+            <div class="sidebar-io-panel">
+                <button id="exportDataBtn" class="btn btn-secondary btn-sm"><i class="fa-solid fa-download"></i> Export Workspace</button>
+                <label for="importDataFile" class="btn btn-secondary btn-sm import-label">
+                    <i class="fa-solid fa-upload"></i> Import Backup
+                </label>
+                <input type="file" id="importDataFile" accept=".json" style="display: none;">
+            </div>
+
             <div class="sidebar-stats">
                 <div class="stat-mini">
                     <span class="stat-label">Productivity Yield</span>
@@ -36,7 +45,7 @@
             <header class="top-bar">
                 <div class="search-wrapper">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="globalSearchInput" placeholder="Fuzzy find tasks by token, tags, or status...">
+                    <input type="text" id="globalSearchInput" placeholder="Fuzzy find tasks by title, description, or subtasks...">
                 </div>
                 <div class="action-wrapper">
                     <button id="openModalBtn" class="btn btn-primary">
@@ -73,7 +82,14 @@
                 <div class="kanban-column" data-status="todo">
                     <div class="column-header">
                         <h3><span class="indicator todo-dot"></span> Backlog Storage</h3>
-                        <span class="task-badge" id="todoBadge">0</span>
+                        <div class="column-ctrl">
+                            <select class="sort-select" data-column="todo">
+                                <option value="default">Default Order</option>
+                                <option value="priority">Sort: Risk Level</option>
+                                <option value="deadline">Sort: Deadline</option>
+                            </select>
+                            <span class="task-badge" id="todoBadge">0</span>
+                        </div>
                     </div>
                     <div class="column-cards-container" id="todoContainer"></div>
                 </div>
@@ -81,7 +97,14 @@
                 <div class="kanban-column" data-status="inprogress">
                     <div class="column-header">
                         <h3><span class="indicator progress-dot"></span> Active Processing</h3>
-                        <span class="task-badge" id="inprogressBadge">0</span>
+                        <div class="column-ctrl">
+                            <select class="sort-select" data-column="inprogress">
+                                <option value="default">Default Order</option>
+                                <option value="priority">Sort: Risk Level</option>
+                                <option value="deadline">Sort: Deadline</option>
+                            </select>
+                            <span class="task-badge" id="inprogressBadge">0</span>
+                        </div>
                     </div>
                     <div class="column-cards-container" id="inprogressContainer"></div>
                 </div>
@@ -89,7 +112,14 @@
                 <div class="kanban-column" data-status="done">
                     <div class="column-header">
                         <h3><span class="indicator done-dot"></span> Verified Nodes</h3>
-                        <span class="task-badge" id="doneBadge">0</span>
+                        <div class="column-ctrl">
+                            <select class="sort-select" data-column="done">
+                                <option value="default">Default Order</option>
+                                <option value="priority">Sort: Risk Level</option>
+                                <option value="deadline">Sort: Deadline</option>
+                            </select>
+                            <span class="task-badge" id="doneBadge">0</span>
+                        </div>
                     </div>
                     <div class="column-cards-container" id="doneContainer"></div>
                 </div>
@@ -111,7 +141,11 @@
                 </div>
                 <div class="form-group">
                     <label for="taskDesc">Detailed Architecture Log</label>
-                    <textarea id="taskDesc" rows="3" placeholder="Log details, reproduction tracks, or scope parameters..."></textarea>
+                    <textarea id="taskDesc" rows="2" placeholder="Log details, scope parameters..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="taskSubtasks">Subtask Checklist (Comma-Separated Elements)</label>
+                    <input type="text" id="taskSubtasks" placeholder="e.g., Setup Environment, Write Database Mock, Run Profiler">
                 </div>
                 <div class="form-row">
                     <div class="form-group val-half">
